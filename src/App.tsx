@@ -5,7 +5,11 @@ import "./App.scss";
 export const FullName = () => {
   const fullName: string = "Piotr Brzozowski";
 
-  return <div className="container">Full name: {fullName}</div>;
+  return (
+    <div className="container text">
+      <span className="text">Full name:</span> {fullName}
+    </div>
+  );
 };
 
 export const Birthday = () => {
@@ -16,7 +20,11 @@ export const Birthday = () => {
     year: "numeric",
   });
 
-  return <div className="container">Birthday: {dateToDisplay}</div>;
+  return (
+    <div className="container text">
+      <span className="text">Birthday:</span> {dateToDisplay}
+    </div>
+  );
 };
 
 export const PresentSuggestion = () => {
@@ -34,13 +42,15 @@ export const PresentSuggestion = () => {
   const presentProposition: string = presentSuggestions[suggestedPresentIndex];
 
   return (
-    <div className="container">You can buy him/her: {presentProposition}</div>
+    <div className="container text">
+      <span className="text">You can buy him/her:</span> {presentProposition}
+    </div>
   );
 };
 
 function App() {
   return (
-    <div className="page">
+    <div className="page container">
       <FullName />
       <Birthday />
       <PresentSuggestion />
