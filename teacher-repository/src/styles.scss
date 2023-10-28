@@ -1,0 +1,54 @@
+// Podstawowy
+// - stwórz plik `styles.scss`,
+// - zaimportuj plik `styles.scss` w miejsce `./App.scss`,
+// - stwórz w `styles.scss` _zmienne_ `$text-warning-color: red`, `$text-active-color: blue`, `$font-small: 10px`, `$font-large: 20px`,
+// - stwórz zależność z wykorzystaniem _nesting_:
+// $text-warning-color: red;
+// $text-active-color: blue;
+// $font-small: 10px;
+// $font-large: 20px;
+
+// .year,
+// .fullName,
+// .salary {
+//   font-size: $font-small;
+//   color: $text-active-color;
+// }
+
+// .isNew {
+//   font-size: $font-large;
+//   color: $text-warning-color;
+// }
+
+// ul {
+//   background-color: lightgray;
+
+//   li {
+//     font-size: $font-small;
+//     color: $text-active-color;
+//   }
+// }
+
+// Rozszerzony
+// - stwórz plik `styles.scss`,
+// - zaimportuj plik `styles.scss` w miejsce `./App.scss`,
+// - stwórz partials `_colors.scss` oraz `_fonts.scss`,
+// - w `_colors.scss` zadeklaruj zmienne `$text-warning-color: red`, `$test-active-color: blue`,
+// - w `_fonts.scss` zadeklaruj zmienne `$font-small: 10px`, `$font-large: 20px`,
+// - stwórz _partial_ `_mixins.scss`,
+// - zaimportować stworzone wcześniej `_colors.scss` oraz `_fonts.scss` do pliku `_mixins.scss`,
+// - w `_mixins.scss` stwórz:
+//
+// - stwórz zależność z wykorzystaniem _nesting_:
+//
+// - zaimportuj `_mixins.scss` do pliku `styles.scss` i wykorzystaj `item-styles` do ostylowania `li`
+
+@import "mixins";
+
+ul {
+  background-color: lightgray;
+
+  li {
+    @include item-styles;
+  }
+}

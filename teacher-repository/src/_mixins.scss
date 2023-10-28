@@ -1,0 +1,12 @@
+@import "colors";
+@import "fonts";
+
+@mixin red-bold-text {
+  color: $text-color-warning;
+  font-weight: 700;
+}
+
+@mixin item-styles {
+  font-size: $font-small;
+  color: $text-active-color;
+}

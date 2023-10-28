@@ -1,0 +1,33 @@
+@import "colors";
+@import "fonts";
+@import "mixins";
+// SASS
+// $text-color: #333
+
+// body
+//   font-size: 16px
+//   color: $text-color
+
+// SCSS
+
+body {
+  font-size: $font-regular;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+// Incepcja - "Never go deeper than three levels beneath"
+// 4th - pseudoelementy, pseudoklasy
+section {
+  font-size: $font-regular;
+
+  div {
+    @include red-bold-text;
+  }
+}
+
+// modules
+// functions
+// extend & inheritance
+// operators
+
