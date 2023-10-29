@@ -1,0 +1,71 @@
+@import "colors";
+@import "Fonts";
+@import "mixins";
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+
+  .container {
+    width: 300px;
+    padding: 10px;
+    color: $text-color-secondary;
+
+    .text {
+      font-weight: 700;
+      color: $text-color-primay;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/background.jpg");
+    filter: opacity(0.4);
+  }
+
+  .avatar__image {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 4px solid $color-white;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+
+  .wishes {
+    padding-left: 10px;
+    text-shadow: 1px 1px 4px #cfcfcf;
+    font-weight: 700;
+    color: $emphasized-text-color;
+  }
+
+  .card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    border-radius: 10px;
+    width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12.5px);
+
+    .card__adornment--first {
+      @include adornment-basic-styles;
+      top: -45px;
+      left: -45px;
+      transform: rotateY(180deg);
+    }
+
+    .card__adornment--second {
+      @include adornment-basic-styles;
+      top: -75px;
+      right: -50px;
+    }
+  }
+}
